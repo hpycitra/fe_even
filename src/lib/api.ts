@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Langsung dikunci ke alamat base URL backend yang benar memakai /api
 const api = axios.create({
-  baseURL: 'https://bf-evenn.vercel.app/api', 
+  baseURL: 'baseURL: 'https://bf-evenn-git-main-hpycitra.vercel.app/api',', 
 });
 
 api.interceptors.request.use((config) => {
