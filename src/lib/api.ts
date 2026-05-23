@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: (import.meta as any).env?.PUBLIC_API_URL 
+  // Pengecekan lebih aman: Pastikan variabelnya benar-benar ada isinya dan bukan string kosong
+  baseURL: typeof (import.meta as any).env?.PUBLIC_API_URL === 'string' && (import.meta as any).env.PUBLIC_API_URL.trim() !== ''
     ? `${(import.meta as any).env.PUBLIC_API_URL}/api` 
     : 'https://bf-evenn.vercel.app/api', 
 });
