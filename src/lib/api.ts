@@ -3,7 +3,7 @@ import axios from 'axios';
 const api = axios.create({
   baseURL: (import.meta as any).env?.PUBLIC_API_URL 
     ? `${(import.meta as any).env.PUBLIC_API_URL}/api` 
-    : 'http://localhost:5000/api',
+    : 'https://bf-even.vercel.app/health',
 });
 
 api.interceptors.request.use((config) => {
