@@ -1,10 +1,8 @@
 import axios from 'axios';
 
+// Di sini langsung kita kunci alamatnya ke backend Vercel, ga pake variabel rewel lagi
 const api = axios.create({
-  // Pengecekan lebih aman: Pastikan variabelnya benar-benar ada isinya dan bukan string kosong
-  baseURL: typeof (import.meta as any).env?.PUBLIC_API_URL === 'string' && (import.meta as any).env.PUBLIC_API_URL.trim() !== ''
-    ? `${(import.meta as any).env.PUBLIC_API_URL}/api` 
-    : 'https://bf-evenn.vercel.app/api', 
+  baseURL: 'https://bf-evenn.vercel.app/api', 
 });
 
 api.interceptors.request.use((config) => {
