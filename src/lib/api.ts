@@ -3,7 +3,7 @@ import axios from 'axios';
 const api = axios.create({
   baseURL: (import.meta as any).env?.PUBLIC_API_URL 
     ? `${(import.meta as any).env.PUBLIC_API_URL}/api` 
-    : 'https://bf-evenn.vercel.app',
+    : 'https://bf-evenn.vercel.app/',
 });
 
 api.interceptors.request.use((config) => {
