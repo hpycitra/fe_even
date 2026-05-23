@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-// Di sini langsung kita kunci alamatnya ke backend Vercel, ga pake variabel rewel lagi
+// Langsung dikunci ke alamat base URL backend yang benar memakai /api
 const api = axios.create({
   baseURL: 'https://bf-evenn.vercel.app/api', 
 });
